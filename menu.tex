@@ -39,7 +39,7 @@
 \newenvironment{Group}[1]
   {\noindent\begin{tabular*}{\textwidth}{@{}p{.8\linewidth}@{\extracolsep{\fill}}r@{}}
     {\fontsize{24}{29}\ColText{\HeadingColor #1}}\\[0.8em]}
-  {\end{tabular*}}
+  {\end{tabular*}\vfill}
 
 % to format each entry
 \newcommand*\Entry[2]{%
@@ -51,21 +51,15 @@
   \begin{adjustwidth}{1em}{}
     \footnotesize #1
   \end{adjustwidth}
-  \vspace{-0.2em}}
+  \vspace{-0.9em}}
 \pagestyle{empty}
 
 \begin{document}
 \input{tapas}
-\vfill
 \input{paellas}
-\vfill
 \input{sandwiches}
-\vfill
 \input{ensaladas}
-\vfill
-
+\input{pasta}
 \input{platos_combinados}
-\vfill
-
 \input{bebidas}
 \end{document}
