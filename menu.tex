@@ -11,6 +11,7 @@
 \setsansfont{Source Sans Pro}
 \setmainfont{Minion Pro}
 \definecolor{HeadingColor}{HTML}{000063}
+\definecolor{TextColor}{HTML}{222222}
 
 \newcommand*\wb[3]{%
   {\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}#3}}
@@ -51,6 +52,14 @@
     \footnotesize #1
   \end{adjustwidth}
   \vspace{-0.95em}}
+
+\makeatletter
+\newcommand{\globalcolor}[1]{%
+  \color{#1}\global\let\default@color\current@color
+}
+\makeatother
+
+\AtBeginDocument{\globalcolor{TextColor}}
 \pagestyle{empty}
 
 \begin{document}
@@ -60,5 +69,5 @@
 \input{ensaladas}
 \input{pasta}
 \input{platos_combinados}
-\input{bebidas}
+%\input{bebidas}
 \end{document}
