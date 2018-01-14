@@ -3,7 +3,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontspec,background,xeCJK,changepage}
 
-\setCJKmainfont{Noto Serif CJK SC Light}
+\setCJKmainfont[Scale=0.9]{Noto Serif CJK SC Light}
 \setCJKsansfont{Noto Serif CJK SC Light}
 
 \newfontfamily\LogoText{Montserrat Alternates}
@@ -35,6 +35,7 @@
 }
 
 \newcommand{\tb}{\textbullet{} }
+\newcommand{\eur}{€}
 
 % a tabular* for each food group
 \newenvironment{Group}[1]
@@ -52,7 +53,7 @@
   \begin{adjustwidth}{1em}{}
     \footnotesize #1
   \end{adjustwidth}
-  \vspace{-0.95em}}
+  \vspace{-1.35em}}
 
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -70,5 +71,6 @@
 \input{ensaladas}
 \input{pasta}
 \input{platos_combinados}
-%\input{bebidas}
+\input{pizza}
+\input{bebidas}
 \end{document}
