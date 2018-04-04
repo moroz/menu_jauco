@@ -1,5 +1,9 @@
 /*.aux
 /*.log
+auto/
+/*.fls
+/*.synctex.gz
+/*.fdb_latexmk
 **~
 # ignore output files
-menu.pdf
+/*.pdf
