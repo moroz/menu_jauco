@@ -1,18 +1,19 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \usepackage[textwidth=12.7cm,centering]{geometry}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{fontspec,background,xeCJK,changepage}
 
-\setCJKmainfont[Scale=0.75]{Source Han Serif SC}
+\setCJKmainfont[Scale=0.95]{Source Han Serif SC}
 \setCJKsansfont{Source Han Serif SC}
 
 \newfontfamily\LogoText{Montserrat Alternates}
 \newfontfamily\ColText{Montserrat}
 \setsansfont{Source Sans Pro}
-\setmainfont{Minion Pro}
+\setmainfont{Baskerville}
 \definecolor{HeadingColor}{HTML}{000063}
-\definecolor{TextColor}{HTML}{222222}
+\definecolor{TextColor}{HTML}{111111}
 \definecolor{EntryColor}{HTML}{003366}
+\definecolor{BulletColor}{HTML}{333333}
 
 \newcommand*\wb[3]{%
   {\fontsize{#1}{#2}\usefont{U}{webo}{xl}{n}#3}}
@@ -34,7 +35,7 @@
 \end{tikzpicture}%
 }
 
-\newcommand{\tb}{\textbullet{} }
+\newcommand{\tb}{{\color{BulletColor}\textbullet{}} }
 \newcommand{\eur}{€}
 
 % a tabular* for each food group
@@ -47,13 +48,15 @@
 \newcommand*\Entry[2]{%
   {\sffamily\textcolor{EntryColor}{#1}} & #2 \\}
 
+\newlength{\subentryMarginBottom}\setlength{\subentryMarginBottom}{-1.25em}
+
 % to format each subentry
 \newcommand*\Expl[1]{%
   \vspace{-1em}
   \begin{adjustwidth}{1em}{}
     \footnotesize #1
   \end{adjustwidth}
-  \vspace{-1.35em}}
+  \vspace{\subentryMarginBottom}}
 
 \makeatletter
 \newcommand{\globalcolor}[1]{%
@@ -72,5 +75,6 @@
 \input{ensaladas}
 \input{platos_combinados}
 \input{pizza}
+\setlength{\subentryMarginBottom}{-1.3em}
 \input{bebidas}
 \end{document}
